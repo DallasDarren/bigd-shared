@@ -1,0 +1,23 @@
+{
+  "name": "bigd-shared",
+  "version": "0.1.0",
+  "description": "Shared entitlement model (and future UI) for BigD Apps. Source of truth: BigDApps/FREEMIUM.md",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./entitlements": "./src/entitlements/index.js",
+    "./react": "./src/react/index.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  }
+}
