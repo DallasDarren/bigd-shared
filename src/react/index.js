@@ -10,6 +10,8 @@
 // `entitlement` defaults to free, which is the production default for the
 // free-only soft launch. Wire a real value here once auth + Pass exist.
 
+export { Header } from './Header.js'
+
 import { createContext, createElement, useContext, useMemo } from 'react'
 import {
   resolve,
