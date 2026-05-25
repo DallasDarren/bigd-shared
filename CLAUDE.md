@@ -39,11 +39,28 @@ Vite imports it from node_modules untransformed. `react` is an optional peer dep
 ## Tests
 `npm test` (node --test, no deps) — covers the resolver in `test/`.
 
-## Distribution (DECIDE at step 2 — wiring apps)
-Each BigD app is its own repo with a Git-connected Cloudflare build that runs `npm install`.
-To consume this package across repos, options: (a) public git dependency
-(`"bigd-shared": "github:DallasDarren/bigd-shared#<tag>"`) — trivial in CI, but the repo must
-be public; (b) private + a CI token / .npmrc; (c) publish to a registry. Not wired yet.
+## Distribution (DECIDED — public git dependency)
+This repo is **public** and consumed as a pinned git dependency. Proven on the hub (bigd-app).
+Cloudflare's Git-connected build runs `npm install`, which fetches it with no auth config.
+
+### Consume in an app (3 steps)
+1. **Add the dep** (pin a tag for reproducibility):
+   ```jsonc
+   // package.json
+   "dependencies": { "bigd-shared": "github:DallasDarren/bigd-shared#v0.1.1" }
+   ```
+2. **Extend Tailwind content** so the shared classes are generated (REQUIRED — Tailwind
+   doesn't scan node_modules by default; skip this and the Header renders unstyled):
+   ```js
+   // tailwind.config.js
+   content: ['./index.html', './src/**/*.{js,jsx}', './node_modules/bigd-shared/src/**/*.{js,jsx}']
+   ```
+3. **Render the header** (set activeId to this app's id):
+   ```jsx
+   import { Header } from 'bigd-shared/react'
+   <Header activeId="darts" />   // 'darts' | 'dice' | 'cards' | 'hub'
+   ```
+Bump the tag here when shared code changes, then update each app's pin.
 
 ## Own repo
 `DallasDarren/bigd-shared`. Gitignored by the parent peanuts-lab repo via `BigDApps/*/`.
