@@ -36,7 +36,7 @@ test('dice: only big5 free, scc gated', () => {
 })
 
 test('cards: both games free, single-match cap on free only', () => {
-  assert.equal(isGameUnlocked('cards', 'rum1000', FREE), true)
+  assert.equal(isGameUnlocked('cards', 'rum200', FREE), true)
   assert.equal(isGameUnlocked('cards', 'sevencardgin', FREE), true)
   assert.equal(isSingleMatchOnly('cards', FREE), true)
   assert.equal(isSingleMatchOnly('cards', PASS), false)

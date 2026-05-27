@@ -38,7 +38,7 @@ export const SITES = Object.freeze([
     name: 'BigD Cards',
     short: 'Cards',
     emoji: '🃏',
-    tagline: 'Rum 1000 and 7 Card Gin.',
+    tagline: 'Rum 200 and 7 Card Gin.',
     url: 'https://cards.beta.bigd.app/',
   },
 ])

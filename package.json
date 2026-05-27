@@ -1,6 +1,6 @@
 {
   "name": "bigd-shared",
-  "version": "0.1.0",
+  "version": "0.2.1",
   "description": "Shared entitlement model (and future UI) for BigD Apps. Source of truth: BigDApps/FREEMIUM.md",
   "private": true,
   "type": "module",
