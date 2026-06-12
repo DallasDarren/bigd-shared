@@ -35,12 +35,19 @@ test('dice: only big5 free, scc gated', () => {
   assert.equal(isGameUnlocked('dice', 'scc', PASS), true)
 })
 
-test('cards: both games free, single-match cap on free only', () => {
+test('cards: rum200 + gin free, single-match cap on free only', () => {
   assert.equal(isGameUnlocked('cards', 'rum200', FREE), true)
   assert.equal(isGameUnlocked('cards', 'sevencardgin', FREE), true)
   assert.equal(isSingleMatchOnly('cards', FREE), true)
   assert.equal(isSingleMatchOnly('cards', PASS), false)
   assert.equal(isSingleMatchOnly('darts', FREE), false) // not a cards-style cap
+})
+
+test('cards: cribbage, canasta, golf are Pass-gated', () => {
+  for (const g of ['cribbage', 'canasta', 'golf']) {
+    assert.equal(isGameUnlocked('cards', g, FREE), false)
+    assert.equal(isGameUnlocked('cards', g, PASS), true)
+  }
 })
 
 test('player caps per app', () => {

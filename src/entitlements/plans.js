@@ -15,7 +15,7 @@ export const TIERS = Object.freeze({
 // Game ids below MUST match each app's own game registry:
 //   Darts: src/games + routes ('301','cricket','bigd-cricket','around-the-clock','shanghai')
 //   Dice:  src/games/catalog.js ('big5','scc')
-//   Cards: src/games/index.js  ('rum200','sevencardgin')
+//   Cards: src/games/index.js  ('rum200','sevencardgin' free; 'cribbage','canasta','golf' pro)
 //
 // Per-app feature keys (the Pro capabilities that gate behind the Pass). These are
 // referenced as '<app>.<feature>' by canUse(), e.g. 'darts.set-match-tracking'.
@@ -37,7 +37,7 @@ export const CATALOG = Object.freeze({
   cards: {
     label: 'BigD Cards',
     freeGames: ['rum200', 'sevencardgin'],
-    proGames: [],
+    proGames: ['cribbage', 'canasta', 'golf'],
     freeMaxPlayers: 2,
     freeSingleMatchOnly: true, // free: play one match, nothing saved
     features: ['more-players', 'match-history', 'series-tracking', 'history', 'stats', 'rosters', 'sync'],
