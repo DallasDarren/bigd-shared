@@ -1,0 +1,61 @@
+/* bigd. brand tokens — GENERATED from tokens.json by tools/build_kit.py. Do not edit. */
+:root{
+  --bigd-ink:#0b0b0c;
+  --bigd-bone:#f4f3ef;
+  --bigd-white:#ffffff;
+  --bigd-graphite:#6b6b70;
+  --bigd-line:#e2e0da;
+  --bigd-chip:#eceae4;
+  --bigd-night-bg:#0f0f10;
+  --bigd-night-panel:#18181a;
+  --bigd-night-text:#f4f3ef;
+  --bigd-night-muted:#9c9ca3;
+  --bigd-night-line:#2a2a2e;
+  --bigd-night-chip:#222225;
+  --bigd-green:#00b371; --bigd-green-on-light:#007d4f; --bigd-green-on-dark:#00b371;
+  --bigd-coral:#ff5a4e; --bigd-coral-on-light:#c2362b; --bigd-coral-on-dark:#ff6b60;
+  --bigd-blue:#3b6cff; --bigd-blue-on-light:#2556e6; --bigd-blue-on-dark:#7b9bff;
+  --bigd-amber:#ffb020; --bigd-amber-on-light:#8f5c00; --bigd-amber-on-dark:#ffb020;
+  --bigd-violet:#8b5cf6; --bigd-violet-on-light:#7344e3; --bigd-violet-on-dark:#a68bff;
+  --bigd-font-sans:Sora, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --bigd-font-mono:'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  --bigd-radius-sm:8px;
+  --bigd-radius-md:12px;
+  --bigd-radius-lg:16px;
+  --bigd-radius-xl:20px;
+  --bigd-radius-pill:999px;
+  --bigd-text-display:700 64px/1.0 var(--bigd-font-sans); --bigd-tracking-display:-0.045em;
+  --bigd-text-h1:700 48px/1.04 var(--bigd-font-sans); --bigd-tracking-h1:-0.04em;
+  --bigd-text-h2:700 34px/1.1 var(--bigd-font-sans); --bigd-tracking-h2:-0.03em;
+  --bigd-text-h3:600 24px/1.25 var(--bigd-font-sans); --bigd-tracking-h3:-0.02em;
+  --bigd-text-lead:400 18px/1.6 var(--bigd-font-sans); --bigd-tracking-lead:-0.005em;
+  --bigd-text-body:400 16px/1.6 var(--bigd-font-sans); --bigd-tracking-body:0em;
+  --bigd-text-small:400 14px/1.5 var(--bigd-font-sans); --bigd-tracking-small:0em;
+  --bigd-text-label:500 12px/1.3 var(--bigd-font-mono); --bigd-tracking-label:0.06em;
+  --bigd-bg:#f4f3ef;
+  --bigd-surface:#ffffff;
+  --bigd-text:#0b0b0c;
+  --bigd-muted:#6b6b70;
+  --bigd-line:#e2e0da;
+  --bigd-chip:#eceae4;
+  --bigd-tile:#0b0b0c;
+  --bigd-accent:var(--bigd-green); --bigd-accent-text:var(--bigd-green-on-light);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bigd-bg:#0f0f10;--bigd-surface:#18181a;--bigd-text:#f4f3ef;--bigd-muted:#9c9ca3;--bigd-line:#2a2a2e;--bigd-chip:#222225;--bigd-tile:#f4f3ef;--bigd-accent-text:var(--bigd-green-on-dark);}}
+:root[data-theme="dark"]{--bigd-bg:#0f0f10;--bigd-surface:#18181a;--bigd-text:#f4f3ef;--bigd-muted:#9c9ca3;--bigd-line:#2a2a2e;--bigd-chip:#222225;--bigd-tile:#f4f3ef;--bigd-accent-text:var(--bigd-green-on-dark);}
+/* per-app accent: put data-app on any element */
+[data-app="bigd"]{--bigd-accent:var(--bigd-green);--bigd-accent-text:var(--bigd-green-on-light);}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) [data-app="bigd"]{--bigd-accent-text:var(--bigd-green-on-dark);}}
+:root[data-theme="dark"] [data-app="bigd"]{--bigd-accent-text:var(--bigd-green-on-dark);}
+[data-app="darts"]{--bigd-accent:var(--bigd-coral);--bigd-accent-text:var(--bigd-coral-on-light);}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) [data-app="darts"]{--bigd-accent-text:var(--bigd-coral-on-dark);}}
+:root[data-theme="dark"] [data-app="darts"]{--bigd-accent-text:var(--bigd-coral-on-dark);}
+[data-app="dice"]{--bigd-accent:var(--bigd-blue);--bigd-accent-text:var(--bigd-blue-on-light);}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) [data-app="dice"]{--bigd-accent-text:var(--bigd-blue-on-dark);}}
+:root[data-theme="dark"] [data-app="dice"]{--bigd-accent-text:var(--bigd-blue-on-dark);}
+[data-app="cards"]{--bigd-accent:var(--bigd-amber);--bigd-accent-text:var(--bigd-amber-on-light);}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) [data-app="cards"]{--bigd-accent-text:var(--bigd-amber-on-dark);}}
+:root[data-theme="dark"] [data-app="cards"]{--bigd-accent-text:var(--bigd-amber-on-dark);}
+[data-app="shoebox"]{--bigd-accent:var(--bigd-violet);--bigd-accent-text:var(--bigd-violet-on-light);}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) [data-app="shoebox"]{--bigd-accent-text:var(--bigd-violet-on-dark);}}
+:root[data-theme="dark"] [data-app="shoebox"]{--bigd-accent-text:var(--bigd-violet-on-dark);}

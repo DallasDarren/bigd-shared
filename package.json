@@ -1,16 +1,20 @@
 {
   "name": "bigd-shared",
-  "version": "0.2.1",
-  "description": "Shared entitlement model (and future UI) for BigD Apps. Source of truth: BigDApps/FREEMIUM.md",
+  "version": "0.3.0",
+  "description": "Shared entitlement model, suite Header and the bigd. brand kit for BigD Apps. Sources of truth: BigDApps/FREEMIUM.md and BigDApps/brand",
   "private": true,
   "type": "module",
   "exports": {
     ".": "./src/index.js",
     "./entitlements": "./src/entitlements/index.js",
-    "./react": "./src/react/index.js"
+    "./react": "./src/react/index.js",
+    "./tailwind": "./src/tailwind.js",
+    "./brand.css": "./src/brand.css",
+    "./brand/*": "./brand/*"
   },
   "scripts": {
-    "test": "node --test"
+    "test": "node --test",
+    "sync-brand": "node scripts/sync-brand.mjs"
   },
   "peerDependencies": {
     "react": ">=18"

@@ -2,6 +2,9 @@
 // its id, names, and where it lives. The hub, the shared Header, and (later) the
 // marketing site all read from here so links never drift.
 //
+// `app` is the brand-kit app id (picks the mark's light: bigd green, darts coral, dice blue,
+// cards amber). `emoji` is legacy; the Header and hub now show each app's mark instead.
+//
 // URLs are the public BETA custom domains (beta.bigd.app). At full launch, swap each
 // `url` to its production bigd.app subdomain — this is the ONE place to do it:
 //   hub -> https://bigd.app   darts -> https://darts.bigd.app   etc.
@@ -11,6 +14,7 @@ export const HUB_ID = 'hub'
 export const SITES = Object.freeze([
   {
     id: 'hub',
+    app: 'bigd',
     name: 'BigD Apps',
     short: 'Home',
     emoji: '🏠',
@@ -19,6 +23,7 @@ export const SITES = Object.freeze([
   },
   {
     id: 'darts',
+    app: 'darts',
     name: 'BigD Darts',
     short: 'Darts',
     emoji: '🎯',
@@ -27,6 +32,7 @@ export const SITES = Object.freeze([
   },
   {
     id: 'dice',
+    app: 'dice',
     name: 'BigD Dice',
     short: 'Dice',
     emoji: '🎲',
@@ -35,6 +41,7 @@ export const SITES = Object.freeze([
   },
   {
     id: 'cards',
+    app: 'cards',
     name: 'BigD Cards',
     short: 'Cards',
     emoji: '🃏',

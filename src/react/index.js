@@ -11,6 +11,7 @@
 // free-only soft launch. Wire a real value here once auth + Pass exist.
 
 export { Header } from './Header.js'
+export { Mark } from './Mark.js'
 
 import { createContext, createElement, useContext, useMemo } from 'react'
 import {

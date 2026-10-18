@@ -1,0 +1,6 @@
+/* bigd. brand base for any BigD app: self-hosted Sora + JetBrains Mono, and the kit's CSS tokens
+   (--bigd-*: ink, bone, lights, theme-aware --bigd-bg/--bigd-text, per-app [data-app] accents).
+   Import it first in the app's CSS:  @import 'bigd-shared/brand.css';
+   Dark-ground apps set <html data-theme="dark">; the hub follows prefers-color-scheme. */
+@import '../brand/fonts/fonts.css';
+@import '../brand/tokens.css';
